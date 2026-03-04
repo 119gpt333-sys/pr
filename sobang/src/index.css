@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-secondary antialiased;
+    background-color: #020617;
+    background-image: radial-gradient(circle at top left, rgba(227, 27, 35, 0.24), transparent 55%),
+      radial-gradient(circle at bottom right, rgba(15, 23, 42, 0.9), #020617);
+  }
+}
+
+/* Glassmorphism Classes */
+.glass {
+  @apply bg-white/80 backdrop-blur-xl border border-white/20 shadow-lg;
+}
+.glass-dark {
+  @apply bg-secondary/80 backdrop-blur-xl border border-white/10 shadow-lg;
+}
+
+/* Layout helpers */
+.page-shell {
+  @apply max-w-7xl mx-auto px-6 md:px-8;
+}
+
+.hero-section {
+  @apply relative overflow-hidden rounded-[2.5rem];
+}
+
+.hero-gradient {
+  @apply bg-secondary;
+  background-image: radial-gradient(circle at top left, rgba(248, 250, 252, 0.04), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(227, 27, 35, 0.22), rgba(15, 23, 42, 1));
+}
+
+.card-elevated {
+  @apply rounded-3xl border border-slate-800/60 bg-slate-900/60 shadow-[0_18px_40px_rgba(15,23,42,0.85)] backdrop-blur-xl;
+}
